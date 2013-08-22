@@ -29,7 +29,7 @@
 					<appendAssemblyId>false</appendAssemblyId>
 					<archive>
 						<manifest>
-							<mainClass>com.github.rabitarochan.git_proxy_clone.Main</mainClass>
+							<mainClass>com.github.rabitarochan.jgit_proxy_clone.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
