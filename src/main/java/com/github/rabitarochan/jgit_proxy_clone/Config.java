@@ -2,6 +2,7 @@ package com.github.rabitarochan.jgit_proxy_clone;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.net.SocketAddress;
 
 /**
  * Config class.
@@ -54,6 +55,19 @@ public class Config {
                     InetSocketAddress.createUnresolved(this.proxyHost, this.proxyPort);
             return new Proxy(Proxy.Type.HTTP, socket);
         }
+    }
+    
+    /**
+     * Get proxy server address.
+     * @return proxy server address value. if not use proxy, then return empty value.
+     */
+    public String getProxyAddress() {
+    	SocketAddress address = this.getProxy().address();
+    	if (address == null) {
+    		return "";
+    	} else {
+    		return address.toString();
+    	}
     }
     
     
