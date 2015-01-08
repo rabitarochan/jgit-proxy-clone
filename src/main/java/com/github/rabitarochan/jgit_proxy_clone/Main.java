@@ -25,7 +25,7 @@ public class Main {
         
         Main main = new Main(config);
         try {
-            main.execute(args);
+            main.execute();
             System.exit(0);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -33,7 +33,7 @@ public class Main {
         }
     }
     
-    private void execute(String[] args) throws InvalidRemoteException, TransportException, GitAPIException, IOException {
+    private void execute() throws InvalidRemoteException, TransportException, GitAPIException, IOException {
         setProxy();
         
         CloneCommand cmd = Git.cloneRepository()
